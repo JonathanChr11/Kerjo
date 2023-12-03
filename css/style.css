@@ -27,6 +27,7 @@
     top: 0;
     padding: 24px 100px;
     background-color: white;
+    z-index: 1;
 }
 
 .navbar-container img {
@@ -85,6 +86,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 96px 100px 0 100px;
@@ -168,4 +170,172 @@
 .about-left-container p {
     color: var(--blue);
     font-size: 18px;
+}
+
+.pt-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 100px;
+}
+
+.pt-container, .kursus-container h1 {
+    font-size: 40px;
+    color: var(--green);
+}
+
+.pt-container, .kursus-container span {
+    color: var(--blue);
+}
+
+.pt-contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pt-container .card-container {
+    width: 600px;
+    position: relative;
+    display: flex;
+    gap: 50px;
+    background-color: var(--white);
+    padding: 25px 15px;
+    border-radius: 12px;
+}
+
+.pt-container .card-container:nth-child(3) {
+    margin-top: 50px;
+}
+
+.pt-container .card-container .card-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.pt-container .card-container .card-contents .card-details h3 {
+    font-size: 32px;
+    color: var(--blue);
+}
+
+.pt-container .card-container .card-contents .card-details h4 {
+    font-size: 24px;
+    color: var(--blue50);
+    opacity: 0.5;
+}
+
+.pt-container .card-container .card-contents .card-people {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    color: var(--blue);
+}
+
+.pt-container .card-container .card-contents .card-people h4 {
+    font-size: 32px;
+}
+
+.pt-container .card-container .card-contents .card-people i {
+    font-size: 25px;
+}
+
+.kursus-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 50px;
+}
+
+.kursus-contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kursus-container .kursus-contents .card-container {
+    background-color: var(--white);
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+}
+
+.kursus-container .kursus-contents .card-container:hover {
+    transform: translate(0, -20px);
+    box-shadow: 4px 4px 10px var(--green);
+}
+
+.kursus-container .kursus-contents .card-container .card-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.kursus-container .kursus-contents .card-container .card-contents h3 {
+    font-size: 20px;
+    color: var(--blue);
+}
+
+.kursus-container .kursus-contents .card-container .card-contents .card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kursus-container .kursus-contents .card-container .card-contents .card-details p {
+    font-size: 16px;
+    color: var(--blue50);
+}
+
+.card-details-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-details-mid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-details-mid-contents {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-details-btn {
+    border: none;
+    background-color: var(--green);
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+}
+
+@media screen and (max-width: 414px) {
+    .landing-container {
+        flex-direction: column;
+    }
 }
